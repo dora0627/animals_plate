@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recordCheckActivity">
+    <include layout="@layout/toolbars" android:id="@+id/recordCheck_toolbars"/>
+
+    <TextView android:id="@+id/recordCheck_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User: "
+        android:textSize="18sp"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:textColor="#232323"
+        />
+    <LinearLayout android:id="@+id/recordCheck_selectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/recordCheck_username"
+        >
+        <Button
+            android:id="@+id/recordCheck_changePasswordButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="變更密碼"/>
+        <Button
+            android:id="@+id/recordCheck_changeMailButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="變更郵件"/>
+        <Button android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/recordCheck_Linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/recordCheck_selectButton">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <EditText android:id="@+id/recordCheck_edit_oldMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="舊密碼"
+                android:textColor="#232323"
+                android:inputType="textPassword"
+                />
+            <EditText android:id="@+id/recordCheck_edit_newMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="新密碼"
+                android:textColor="#232323"
+                android:inputType="textPassword"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/recordCheck_updateButtonPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="更新"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/recordCheck_Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/recordCheck_Linear1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <EditText android:id="@+id/recordCheck_edit_oldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="舊mail"
+                android:textColor="#232323"
+                android:inputType="textPassword"
+                />
+            <EditText android:id="@+id/recordCheck_edit_newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="新mail"
+                android:textColor="#232323"
+                android:inputType="textPassword"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/recordCheck_updateButtonMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="更新"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

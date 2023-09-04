@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapanimalActivity"
+    >
+    <include android:id="@+id/bar" layout="@layout/toolbars"/>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+
+    </org.osmdroid.views.MapView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fbtn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        app:icon="@drawable/ic_search"
+        app:iconTint="#EB000000"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/searchView"
+        app:layout_constraintTop_toTopOf="@id/bar"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:theme="@style/Theme.Material3.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search location"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:elevation="8dp"
+            android:searchIcon="@drawable/ic_search"
+            style="@style/SearchViewStyle"
+            android:background="@drawable/searchview_bg"
+            app:layout_constraintTop_toBottomOf="@id/bar"
+            android:visibility="invisible"
+           />
+
+
+
+    <ImageView
+        android:id="@+id/compassImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="136dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/compass_bg"
+        android:src="@drawable/compass_iconrmbg"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_fab_function"
+    app:layout_constraintTop_toBottomOf="@id/searchView"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="8dp"
+    android:text="Function"
+    android:backgroundTint="#00B8D4"
+    android:gravity="end"
+    android:textColor="#000000"
+    app:iconTint="#000000"
+    app:icon="@drawable/baseline_add_24"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_fab_reflash"
+        app:layout_constraintTop_toBottomOf="@id/btn_fab_function"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:fabSize="normal"
+        android:backgroundTint="#00B8D4"
+        android:src="@drawable/ic_refresh"
+        android:contentDescription="reflash status"
+        app:iconTint="#000000"
+        android:theme="@style/Theme.Material3.Light"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_fab_nowlocation"
+        app:layout_constraintTop_toBottomOf="@id/btn_fab_reflash"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:fabSize="normal"
+        android:backgroundTint="#00B8D4"
+        android:src="@drawable/ic_my_location"
+        android:contentDescription="lead location"
+        app:iconTint="#000000"
+        android:theme="@style/Theme.Material3.Light"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_fab_newpost"
+        app:layout_constraintTop_toBottomOf="@id/btn_fab_nowlocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:fabSize="normal"
+        android:backgroundTint="#00B8D4"
+        android:src="@drawable/shop_edit"
+        android:contentDescription="edit"
+        android:theme="@style/Theme.Material3.Light"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_fab_findshe"
+        app:layout_constraintTop_toBottomOf="@id/btn_fab_newpost"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:fabSize="normal"
+        android:backgroundTint="#00B8D4"
+        android:src="@drawable/ic_search"
+        android:contentDescription="search shleter"
+        app:iconTint="#000000"
+        android:theme="@style/Theme.Material3.Light"/>
+    <TextView android:id="@+id/txt_ref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刷新狀態"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_fab_reflash"
+        app:layout_constraintTop_toTopOf="@id/btn_fab_reflash"
+        app:layout_constraintBottom_toBottomOf="@id/btn_fab_reflash"/>
+    <TextView android:id="@+id/txt_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="導至目前位置"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_fab_nowlocation"
+        app:layout_constraintTop_toTopOf="@id/btn_fab_nowlocation"
+        app:layout_constraintBottom_toBottomOf="@id/btn_fab_nowlocation"/>
+    <TextView android:id="@+id/txt_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="編輯通報點"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_fab_newpost"
+        app:layout_constraintTop_toTopOf="@id/btn_fab_newpost"
+        app:layout_constraintBottom_toBottomOf="@id/btn_fab_newpost"/>
+    <TextView android:id="@+id/txt_she"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="找最近收容所"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_fab_findshe"
+        app:layout_constraintTop_toTopOf="@id/btn_fab_findshe"
+        app:layout_constraintBottom_toBottomOf="@id/btn_fab_findshe"/>
+    <Switch android:id="@+id/map_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通報頁面"
+        android:textSize="20sp"
+        android:textColor="#232323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="560dp"/>
+
+    <LinearLayout
+        android:id="@+id/dashborad_counts_and_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/dashborad_counts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/radious_left_design"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="今日通報件數"
+                android:textSize="16sp" />
+
+            <TextView android:id="@+id/today_report_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dashborad_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="今日移動距離"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView android:id="@+id/show_totaldistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0m"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/show_statue_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:theme="@style/Theme.Material3.Light"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/show_arrow_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

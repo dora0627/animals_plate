@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatFragment"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+   <!--<ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+   </ListView>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/marquee_textsample">
+
+        <TextView
+            android:id="@+id/marqueeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:text="10:00 的醫生即將於5分鐘後開始"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp" />
+
+    </RelativeLayout>
+    <include layout="@layout/chatroom_sample"/>
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity2"
+    android:background="#FFD600">
+
+    <include
+        layout="@layout/login_bg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-105dp" />
+    <!--
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logincard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:cardBackgroundColor="#F8F9F7"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton android:id="@+id/btn_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:src="@drawable/baseline_keyboard_arrow_left_24"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#00FFFDFD"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginBottom="0dp"
+                    android:text="登入Login"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/pdlayout"
+                    android:textColorHint="@color/gray"
+                    android:backgroundTint="@color/gray"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="0dp"
+                    android:hint="帳號/Account"
+                    app:startIconDrawable="@drawable/baseline_account_circle_24"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:helperText="*Required"
+                    app:helperTextTextColor="#E60606"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/edtpas"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/accountlayout"
+                    android:textColorHint="@color/gray"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:hint="密碼/Password"
+                    android:backgroundTint="@color/gray"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:startIconDrawable="@drawable/baseline_password_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/edtacc"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize="20sp"
+                        android:inputType="textPassword" />
+                </EditText>
+
+                <Button android:id="@+id/btn_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="login"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#FF9800"
+                    android:elevation="40dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"/>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="忘記密碼?"
+                    android:autoLink="web"
+                    android:textSize="18sp"
+                    android:textColorLink="#0000FF"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sign_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:autoLink="web"
+                    android:text="還沒有帳號嗎註冊一個吧!"
+                    android:textSize="18sp"
+                    android:textColorLink="#0000FF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView> -->
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_cat_svg"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/item_species"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Species"
+        android:layout_toRightOf="@+id/item_image"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"/>
+
+</RelativeLayout>

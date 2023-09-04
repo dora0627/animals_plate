@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetContainer1"
+    android:background="@drawable/bottom_sheet_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="編輯動物資料"
+        android:textColor="#323232"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical">
+                <EditText android:id="@+id/bottomSheet_id1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:inputType="number"
+                    android:hint="請輸入通報編號"
+                    android:textColor="#323232"
+                    android:textStyle="bold"/>
+                <EditText android:id="@+id/bottomSheet_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:hint="請輸入初始動物名稱"
+                    android:textColor="#323232"
+                    android:textStyle="bold"/>
+                <EditText android:id="@+id/bottomSheet_species1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:hint="請輸入初始動物種類"
+                    android:textColor="#323232"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorDivider"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="需要更新的資料"
+        android:textColor="#323232"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/bottomSheet_animal_photo2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add"
+            app:riv_corner_radius="10dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical">
+
+                <EditText android:id="@+id/bottomSheet_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:hint="請輸入新的動物名稱"
+                    android:textColor="#323232"
+                    android:textStyle="bold"/>
+                <EditText android:id="@+id/bottomSheet_species2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:hint="請輸入新的動物種類"
+                    android:textColor="#323232"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <Button android:id="@+id/bottomSheet_update1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="更新"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="#fefefe"
+            android:background="@drawable/button_background_bottom_sheet"/>
+        <Button android:id="@+id/bottomSheet_delete1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="刪除"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            android:textColor="#fefefe"
+            android:background="@drawable/button_background_bottom_sheet"/>
+        <Button android:id="@+id/bottomSheet_cancel1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="取消"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="#fefefe"
+            android:background="@drawable/button_background_bottom_sheet"/>
+    </LinearLayout>
+
+</LinearLayout>

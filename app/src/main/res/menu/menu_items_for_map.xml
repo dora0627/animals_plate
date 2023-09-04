@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_item1"
+        android:title="添加通報點Add a notification point"
+        />
+    <item android:id="@+id/menu_item2"
+        android:title="尋找附近的收容所" />
+    <item android:id="@+id/menu_item3"
+    android:title="定位目前所在的位置" />
+    <item android:id="@+id/menu_item4"
+        android:title="使用說明"
+       android:actionLayout="@layout/menu_item_layout_formap"
+       />
+
+</menu>

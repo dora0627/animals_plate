@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+        <ImageView android:id="@+id/otp_img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            android:layout_gravity="start"
+            android:layout_margin="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="104dp"
+            android:text="忘記密碼"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fg"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="64dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="輸入您的帳號及Mail以繼續"
+            android:textSize="16sp"
+            android:textColor="#B07A7171"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"/>
+        <TextView android:id="@+id/txtsel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帳號 Mail"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#B07A7171"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="24dp"
+           />
+        <LinearLayout android:id="@+id/linear_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+            <EditText android:id="@+id/otp_edtaccount"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/otp_edtsample"
+                android:layout_weight="2"
+                android:hint="您的帳號"
+                android:textColorHint="@color/gray"
+                android:textColor="#9E847E7E"
+                android:theme="@style/Theme.Material3.Dark.NoActionBar"
+                android:inputType="textEmailAddress"/>
+            <EditText android:id="@+id/otp_edtmail"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/otp_edtsample"
+                android:layout_weight="2"
+                android:hint="您的電子郵件"
+                android:textColorHint="@color/gray"
+                android:textColor="#9E847E7E"
+                android:theme="@style/Theme.Material3.Dark.NoActionBar"
+                android:inputType="textEmailAddress"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linear_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible">
+            <Spinner android:id="@+id/otp_spiphone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:theme="@style/Theme.Material3.Dark.NoActionBar"
+                />
+            <EditText android:id="@+id/otp_edtphone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/otp_edtsample"
+                android:layout_weight="2"
+                android:hint="您的手機號碼"
+                android:textColorHint="@color/gray"
+                android:textColor="#9E847E7E"
+                android:theme="@style/Theme.Material3.Dark.NoActionBar"
+                android:inputType="number"/>
+        </LinearLayout>
+        <Button android:id="@+id/otp_btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下一步"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/dialogbtn_sample"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

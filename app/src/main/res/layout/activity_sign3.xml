@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignActivity3"
+    android:background="#8C9EFF">
+
+    <include layout="@layout/sign_bg"/>
+    <!--<androidx.cardview.widget.CardView
+        android:id="@+id/logincard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:cardBackgroundColor="#F8F9F7"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton android:id="@+id/btn_sb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00FFFDFD"/>-->
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="註冊Sign"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_gravity="top|center"
+            />-->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <EditText android:id="@+id/edac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="35dp"
+                app:counterMaxLength="20"
+                android:hint="帳號/Account"
+                android:backgroundTint="@color/gray"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                app:counterEnabled="true"
+                app:startIconDrawable="@drawable/baseline_account_circle_24"
+                >
+
+                <EditText android:id="@+id/ed_ac"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:inputType="text"
+                    />
+            </EditText>
+
+            <EditText android:id="@+id/edpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:backgroundTint="@color/gray"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="密碼/Password"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/ed_pa"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:inputType="textPassword"
+                    />
+            </EditText>
+
+            <EditText android:id="@+id/ticp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:backgroundTint="@color/gray"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/edpa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="密碼確認/Password check"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/ed_cp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:inputType="textPassword"
+                    />
+            </EditText>
+            <EditText android:id="@+id/edmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ticp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textColorHint="@color/gray"
+                android:backgroundTint="@color/gray"
+                android:textStyle="bold"
+                android:hint="電子郵件/E-mail"
+                app:counterEnabled="true"
+                app:startIconDrawable="@drawable/baseline_email_24"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/ed_ma"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:inputType="textEmailAddress"
+                    />
+            </EditText>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_for_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="420dp"
+            android:backgroundTint="#80D8FF"
+            android:gravity="center"
+            android:text="註冊"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <Button android:id="@+id/btn_for_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#84FFFF"
+            app:layout_constraintTop_toTopOf="@id/btn_for_sign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="420dp"
+            android:text="檢查"
+
+            android:textSize="15sp"/>
+
+    </androidx.cardview.widget.CardView>
+    -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

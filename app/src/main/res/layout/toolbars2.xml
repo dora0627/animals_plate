@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/tbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:background="#536DFE"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp">
+    <ImageButton android:id="@+id/ab_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:enabled="true"
+       android:background="@drawable/baseline_keyboard_arrow_left_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登入/Login"
+            android:textColor="#FAFAFA"
+            android:textSize="18sp"
+            android:layout_marginStart="30dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

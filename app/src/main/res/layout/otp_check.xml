@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+        <LinearLayout android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+
+            android:layout_margin="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView android:id="@+id/otp2_img_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_keyboard_arrow_left_24"
+                    android:layout_marginTop="16dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTP驗證"
+                    android:textSize="24sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="104dp"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帳號:"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/otp_showAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+            <!--email與電話號碼-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/otp_showMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abc@example.com"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="48dp"/>
+        </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp"
+        android:background="#FFFFFF"
+        app:cardCornerRadius="32dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/otp_cardsample"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar"
+            android:padding="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="輸入OTP已進行驗證"
+                android:textSize="24sp"
+
+                android:textColor="#6B6B6B"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the veritifacation code We just send to phone number"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText android:id="@+id/edt1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="24sp"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="number"
+                    android:background="@drawable/otp_inputsample"/>
+                <EditText android:id="@+id/edt2"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    android:background="@drawable/otp_inputsample"/>
+                <EditText android:id="@+id/edt3"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    android:background="@drawable/otp_inputsample"/>
+                <EditText android:id="@+id/edt4"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/otp_inputsample"/>
+            </LinearLayout>
+            <Button android:id="@+id/btn_otp_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/dialogbtn_sample"
+                android:text="驗證"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:drawableEnd="@drawable/ic_arrow_circle_right"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="沒有收到簡訊? 重新傳送"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".apiTestActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#ffffff">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+       />
+    <EditText android:id="@+id/showapi_data"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="輸入初始值"
+        android:text="0"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints" />
+    <EditText android:id="@+id/showapi_skipdata"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="輸入跳過值"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/showapi_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints" />
+    <EditText android:id="@+id/showapi_speciesdata"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="輸入種類"
+        app:layout_constraintTop_toBottomOf="@id/showapi_skipdata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints" />
+    <Button android:id="@+id/getapi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/showapi_speciesdata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView android:id="@+id/txt_result"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#CBBBBB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/getapi_btn"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_api"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_margin="20dp"
+        android:elevation="2dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/item_selector"
+        android:background="@drawable/round_corner"
+        tools:ignore="MissingClass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

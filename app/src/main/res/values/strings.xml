@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">animals_plate</string>
+    <string name="app_name2.0">動物平台</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tips">帳號或密碼錯誤!</string>
+    <string name="content">「動物及外來種通報平台」是一個專為保育愛好者所設計的應用程式。它提供了一個便捷和實用的方法，讓使用者可以通報有關動物和外來種的資訊。使用者可以通過應用程式上傳照片，以及提供有關動物或外來種的描述和位置資訊。</string>
+    <string name="content2">這個平台還提供了一個追蹤系統，讓使用者可以隨時查看他們的通報的狀態，以及其他使用者的通報。此外，應用程式還提供了專家咨詢，以回答使用者關於動物和外來種的任何疑問。</string>
+    <string name="content3">這個平台主旨是在加強對動物的關注。它是一個非常實用和實際的工具，對於那些對於保育及生態有熱情的人是一個必備的應用程式。</string>
+    <string name="taipel_animal_protect">台北市動物保護處</string>
+    <string name="title_activity_maps_animal">Maps_animalActivity</string>
+    <string name="introfirst">趕快進入平台參與更多的內容吧!</string>
+    <string name="introsecond">打開手機->點擊地圖->立刻通報</string>
+    <string name="introthird">在線詢問動物醫生，獲得解答</string>
+</resources>

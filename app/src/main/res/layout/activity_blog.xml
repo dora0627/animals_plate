@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe"
+    tools:context=".BlogActivity">
+<!--toolbar-->
+    <include layout="@layout/toolbars" android:id="@+id/blogToolBar"/>
+    <!--recyclerview-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        android:id="@+id/swipeRefresh_blog"
+        android:layout_width="match_parent"
+        android:layout_height="640dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/blogRecycler"
+            >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!--fab-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/blogPostFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/shop_edit"
+        app:backgroundTint="#AED581"
+        android:layout_marginBottom="24dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

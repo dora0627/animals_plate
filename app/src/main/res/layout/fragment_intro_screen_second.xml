@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroScreenSecondFragment"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/intro_bg">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_height="250dp"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/animal_post_1_logo"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="動物地圖即時通報"
+        android:textSize="26sp"
+        android:textColor="#252525"
+        android:gravity="center"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/introsecond"
+        android:textSize="18sp"
+        android:textColor="#F0E6E6"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+        <TextView android:id="@+id/slideSecondBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#252525"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:gravity="bottom|start"
+            android:layout_gravity="bottom|end"/>
+        <TextView android:id="@+id/slideSecondNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="#252525"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:gravity="bottom|end"
+            android:layout_gravity="bottom|end"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="200dp"
+        >
+
+        <TextView
+            android:id="@+id/skip_bottom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:text="跳過直接進入大廳"
+            android:textColor="#252525"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
